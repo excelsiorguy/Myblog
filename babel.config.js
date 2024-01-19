@@ -1,6 +1,5 @@
 module.exports = function (api) {
   api.cache(true);
-  // We've assembled some for common environments:
   const presets = [
     // https://babeljs.io/docs/en/babel-preset-env
     "@babel/preset-env",

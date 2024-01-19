@@ -1,8 +1,3 @@
-/*
- * @ author wanliyunyan
- * @ github  https://github.com/wanliyunyan
- * @ use production
- */
 const os = require("os");
 const path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");

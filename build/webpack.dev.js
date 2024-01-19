@@ -1,8 +1,3 @@
-/*
- * @ author wanliyunyan
- * @ github  https://github.com/wanliyunyan
- * @ use development
- */
 const webpack = require("webpack");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
