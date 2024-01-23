@@ -1,12 +1,19 @@
 export default {
-  namespace: 'list',
+  namespace: "list",
   state: {
-    list: []
+    list: [],
   },
-  reducers: {},
+  reducers: {
+    add(state, { payload }) {
+      console.log('payloadpayload', payload)
+      // const { values } = payload;
+      const tmpList = [...state.list, { ...payload }];
+      return { ...state, list: tmpList };
+    },
+  },
   subscriptions: {
-    setup() {}
+    setup() {},
   },
 
-  effects: {}
+  effects: {},
 };

@@ -10,3 +10,6 @@
 .DS_Store
 npm-debug.log*
 /.idea
+
+# 编辑器相关配置
+.vscode

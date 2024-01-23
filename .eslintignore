@@ -1,0 +1,9 @@
+# production
+/dist
+
+# JS | JSX
+*.js
+*.jsx
+
+# Less
+*.less

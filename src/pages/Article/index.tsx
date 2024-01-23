@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from '../../components/Nav';
 import { withRouter } from 'dva/router';
 
-const Article = (props) => {
+const Article = withRouter((props: any) => {
   console.log('location', props.location);
   return (
     <div>
@@ -11,6 +11,6 @@ const Article = (props) => {
       {props.location.pathname}
     </div>
   );
-};
+});
 
-export default withRouter(Article);
+export default Article;

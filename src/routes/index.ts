@@ -7,7 +7,7 @@ export interface IRouter {
   show: boolean;
   exact?: boolean;
   icon?: ReactNode;
-  component?: React.JSX.Element;
+  component?: any;
   children?: IRouter[];
 }
 const Routes: IRouter[] = [
