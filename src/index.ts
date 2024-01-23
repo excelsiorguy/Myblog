@@ -1,8 +1,9 @@
-import dva from "dva";
+import dva from 'dva';
+
 // import createLoading from "dva-loading";
-import "./index.less";
-import models from "./models";
-import router from "./router";
+import './index.less';
+import Router from './router';
+import models from './models';
 
 // const { registerObserver } = require("react-perf-devtool");
 // registerObserver({ timeout: 30000 });
@@ -19,7 +20,7 @@ models.forEach((m: any): void => {
 });
 
 // 4. Router
-app.router(router);
+app.router(Router);
 
 // 5. Start
-app.start("#root");
+app.start('#root');

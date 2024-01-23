@@ -1,5 +1,5 @@
 import Home from './Home';
-import Archive from './Archive';
 import Article from './Article';
+import Archive from './Archive';
 
 export { Home, Archive, Article };

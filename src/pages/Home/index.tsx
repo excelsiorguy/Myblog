@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import { Layout, Space } from 'antd';
-import Nav from '../../components/Nav';
+
 import { connect } from 'dva';
+import { Button, Layout, Space } from 'antd';
+
+import Nav from '@/components/Nav';
 import ArticleBox from '../../components/ArticleBox';
 import styles from './index.less';
 
@@ -61,6 +63,7 @@ const Home = connect(mapStateToProps)((props: any) => {
         背景图
       </div> */}
       <div className={styles['content']}>
+        <Button type="primary">123</Button>
         <div className={styles['left-content']}>
           {mock?.map(item => <ArticleBox id={item.id} title={item.title} desc={item.desc} />)}
         </div>

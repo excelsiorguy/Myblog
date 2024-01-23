@@ -1,6 +1,7 @@
-import { message, notification } from 'antd';
 import axios from 'axios';
 import type { AxiosRequestConfig, AxiosInstance, AxiosResponse } from 'axios';
+import { message, notification } from 'antd';
+
 import { IOption, ApiReturnType } from '../types';
 import { RequestEnum } from '../enums/httpEnum';
 
@@ -105,16 +106,16 @@ export const del = (url: string, param?: Record<string, unknown>, config?: Axios
 
 // interceptors
 axios.interceptors.request.use(
-  (config) => config,
-  (err) => {
+  config => config,
+  err => {
     message.error('request timed out');
     return Promise.reject(err);
   }
 );
 
 axios.interceptors.response.use(
-  (result) => result,
-  (err) => {
+  result => result,
+  err => {
     if (err && err.response) {
       const {
         response: { data, status, statusText }

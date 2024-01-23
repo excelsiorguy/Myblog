@@ -1,4 +1,5 @@
 import { cloneDeep } from 'lodash-es';
+
 import navData from '../common/nav';
 
 function getPlainNode(nodeList: any, parentPath = '') {
@@ -20,9 +21,9 @@ function getPlainNode(nodeList: any, parentPath = '') {
 }
 
 export function getRouteData(path: string) {
-  if (!navData.some((item) => item.layout === path) || !navData.filter((item) => item.layout === path)[0].children) {
+  if (!navData.some(item => item.layout === path) || !navData.filter(item => item.layout === path)[0].children) {
     return null;
   }
-  const dataList = cloneDeep(navData.filter((item) => item.layout === path)[0]);
+  const dataList = cloneDeep(navData.filter(item => item.layout === path)[0]);
   return getPlainNode(dataList.children);
 }

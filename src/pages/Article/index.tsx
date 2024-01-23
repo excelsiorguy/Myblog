@@ -1,6 +1,8 @@
 import React from 'react';
-import Nav from '../../components/Nav';
+
 import { withRouter } from 'dva/router';
+
+import Nav from '../../components/Nav';
 
 const Article = withRouter((props: any) => {
   console.log('location', props.location);

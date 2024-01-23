@@ -1,18 +1,20 @@
 import React from 'react';
-import { Card } from 'antd';
+
+import { RouteComponentProps } from 'react-router';
 import { withRouter } from 'dva/router';
+import { Card } from 'antd';
 
 const { Meta } = Card;
-export interface IArticleBox {
-  id: string;
+export interface IArticleBoxProps extends RouteComponentProps {
+  id?: string;
   title: string;
   desc: string;
   time?: string;
   bgcImg?: string;
-  history?: any;
 }
 
-const ArticleBox: React.FC<IArticleBox> = ({ title, desc, history, id }) => {
+const ArticleBox = (props: IArticleBoxProps) => {
+  const { title, desc, history, id } = props;
   return (
     <Card
       hoverable
